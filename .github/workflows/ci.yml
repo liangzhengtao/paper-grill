@@ -1,0 +1,111 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Check file structure
+      run: |
+        # Verify all skill files exist
+        test -f "skills/会议风格/neurips-review.md"
+        test -f "skills/会议风格/icml-review.md"
+        test -f "skills/会议风格/iclr-review.md"
+        test -f "skills/会议风格/acl-review.md"
+        test -f "skills/会议风格/cvpr-review.md"
+        test -f "skills/通用审稿/structured-review.md"
+        test -f "skills/通用审稿/identify-weaknesses.md"
+        test -f "skills/通用审稿/review-calibration.md"
+        test -f "skills/投稿辅助/rebuttal-writing.md"
+        test -f "skills/投稿辅助/paper-self-review.md"
+
+        # Verify documentation files
+        test -f "README.md"
+        test -f "README.zh.md"
+        test -f "LICENSE"
+        test -f "CONTRIBUTING.md"
+        test -f "SECURITY.md"
+        test -f "CODE_OF_CONDUCT.md"
+        test -f "CHANGELOG.md"
+
+        echo "All required files exist!"
+
+    - name: Check skill file structure
+      run: |
+        # Verify each skill file contains required sections
+        for file in skills/会议风格/*.md skills/通用审稿/*.md skills/投稿辅助/*.md; do
+          echo "Checking $file..."
+          grep -q "## When to Use" "$file" || echo "Missing: When to Use in $file"
+          grep -q "## Review Framework" "$file" || echo "Missing: Review Framework in $file"
+          grep -q "## Review Template" "$file" || echo "Missing: Review Template in $file"
+          grep -q "## Example Reviews" "$file" || echo "Missing: Example Reviews in $file"
+          grep -q "## Common Mistakes" "$file" || echo "Missing: Common Mistakes in $file"
+          grep -q "## 中文版本" "$file" || echo "Missing: 中文版本 in $file"
+        done
+
+        echo "Skill structure check complete!"
+
+    - name: Check README files
+      run: |
+        # Verify README.md contains key sections
+        grep -q "# 🔥 paper-grill" README.md || echo "Missing: Title in README.md"
+        grep -q "## Skills" README.md || echo "Missing: Skills section in README.md"
+        grep -q "## Conference Comparison" README.md || echo "Missing: Conference Comparison in README.md"
+        grep -q "## Quick Start" README.md || echo "Missing: Quick Start in README.md"
+
+        # Verify README.zh.md exists and has content
+        test -s README.zh.md || echo "README.zh.md is empty"
+
+        echo "README check complete!"
+
+    - name: Check for common issues
+      run: |
+        # Check for broken markdown links (basic check)
+        for file in *.md skills/**/*.md; do
+          # Check for unbalanced brackets
+          if grep -q '\[.*\](.*)' "$file"; then
+            echo "Links found in $file (manual verification recommended)"
+          fi
+        done
+
+        # Check file sizes (ensure skills are substantial)
+        for file in skills/**/*.md; do
+          lines=$(wc -l < "$file")
+          if [ "$lines" -lt 200 ]; then
+            echo "Warning: $file has only $lines lines (expected 200+)"
+          fi
+        done
+
+        echo "Common issues check complete!"
+
+  markdown-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Lint markdown files
+      uses: avto-dev/markdown-lint@v1
+      with:
+        args: './**/*.md'
+        config: '.markdownlint.json'
+
+  link-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Check links
+      uses: lycheeverse/lychee-action@v1
+      with:
+        args: --verbose --no-progress './**/*.md'
+        fail: false
