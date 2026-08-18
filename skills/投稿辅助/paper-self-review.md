@@ -30,7 +30,7 @@ Take a break from the paper, then review as if seeing it for the first time:
 Conduct a thorough technical review:
 
 1. **Technical soundness** - Is the methodology correct?
-2. **Experimental evaluation** - Are experiments comprehensive?
+2. **Experimental evaluation** - Are experiments complete?
 3. **Claims validation** - Are claims supported by evidence?
 4. **Presentation quality** - Is the paper well-written?
 5. **Reproducibility** - Can someone replicate this work?
@@ -194,7 +194,7 @@ Check for these deal-breakers:
 |-----------|---|---|---|
 | Novelty | Incremental | Moderate | Significant |
 | Soundness | Flawed | Adequate | Rigorous |
-| Experiments | Insufficient | Adequate | Comprehensive |
+| Experiments | Insufficient | Adequate | Complete |
 | Clarity | Poor | Acceptable | Excellent |
 | Significance | Limited | Moderate | Important |
 
@@ -296,7 +296,7 @@ Before submission, verify these gates:
 **Score:** [ ]
 
 **Self-Assessment:**
-- Are experiments comprehensive?
+- Are experiments complete?
 - Are baselines appropriate?
 - Are metrics suitable?
 
@@ -481,7 +481,7 @@ The methodology is correct. Proofs have been verified by [co-author name]. Assum
 ### 3. Experiments (4/5)
 
 **Self-Assessment:**
-Comprehensive evaluation on 3 benchmarks with 5 baselines. Includes ablation studies and statistical significance.
+Complete evaluation on 3 benchmarks with 5 baselines. Includes ablation studies and statistical significance.
 
 **Evidence:**
 - Benchmarks: ImageNet, COCO, GLUE
@@ -567,7 +567,7 @@ Addresses an important problem (transformer efficiency). Has practical applicati
 **Recommendation:** [✓] Submit [ ] Revise [ ] Delay
 
 **Reasoning:**
-The paper is ready for submission. The contribution is clear, experiments are comprehensive, and the presentation is polished. Minor issues can be fixed before the final version.
+The paper is ready for submission. The contribution is clear, experiments are complete, and the presentation is polished. Minor issues can be fixed before the final version.
 ```
 
 ### Bad Example (What NOT to Do)
@@ -599,7 +599,7 @@ Everything looks great. No issues. Ready to submit.
 
 ### Strengths:
 - Novel contribution
-- Comprehensive experiments
+- Complete experiments
 - Clear writing
 
 ### Weaknesses:

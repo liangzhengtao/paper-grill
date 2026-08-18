@@ -45,7 +45,7 @@ When using these skills with AI assistants:
 - Always verify AI-generated reviews with human judgment
 - Do not use AI reviews as the sole basis for acceptance/rejection decisions
 
-## Best Practices
+## Proven Patterns
 
 1. **Review AI output**: Always review AI-generated content before using
 2. **Verify claims**: Check that AI-generated criticisms are accurate

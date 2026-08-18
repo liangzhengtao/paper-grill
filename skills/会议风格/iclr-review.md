@@ -158,7 +158,7 @@ This paper proposes "Representation Alignment Contrastive Learning" (RACL), a ne
 
 - **S1 (Novelty):** The asymmetric loss function (Equation 5) that weights pairs by estimated mutual information is novel. This goes beyond standard contrastive learning by explicitly considering what information each augmentation preserves.
 - **S2 (Representation Quality):** Linear probe accuracy on ImageNet (Table 1) shows consistent improvement over baselines (+1.2% over MoCo v3). More importantly, Figure 4 shows that the learned representations maintain more semantic information as measured by centered kernel alignment (CKA) with supervised features.
-- **S3 (Evaluation):** The evaluation is comprehensive, including linear evaluation, fine-tuning, few-shot learning, and representation analysis. The 7 downstream tasks span diverse domains (classification, detection, segmentation, retrieval).
+- **S3 (Evaluation):** The evaluation is complete, including linear evaluation, fine-tuning, few-shot learning, and representation analysis. The 7 downstream tasks span diverse domains (classification, detection, segmentation, retrieval).
 - **S4 (Analysis):** Figure 5 analyzing the information bottleneck behavior provides genuine insight into why the method works. The visualization of attention maps (Figure 6) shows the model focuses on more semantically meaningful regions.
 - **S5 (Reproducibility):** The authors provide code and detailed hyperparameters. The method is described clearly enough to reimplement.
 
@@ -183,7 +183,7 @@ The paper does not discuss the computational cost of the method, which is import
 
 ## Rating: 8
 
-The paper makes a solid contribution to self-supervised learning with a novel loss function and comprehensive evaluation. The representation analysis (Figures 4-6) provides genuine insights. The main concerns are missing collapse analysis and compute comparison, but these can be addressed in the rebuttal.
+The paper makes a solid contribution to self-supervised learning with a novel loss function and complete evaluation. The representation analysis (Figures 4-6) provides genuine insights. The main concerns are missing collapse analysis and compute comparison, but these can be addressed in the rebuttal.
 
 ## Confidence: 4
 
@@ -193,7 +193,7 @@ I have published on self-supervised learning and contrastive methods. I am famil
 
 ## Overall Assessment
 
-I recommend acceptance. The core contribution (asymmetric loss with mutual information weighting) is novel and well-motivated. The experimental evaluation is comprehensive and the representation analysis provides real insights. The main concerns (collapse analysis, compute comparison) are addressable. I look forward to seeing the authors' response and will update my review accordingly.
+I recommend acceptance. The core contribution (asymmetric loss with mutual information weighting) is novel and well-motivated. The experimental evaluation is complete and the representation analysis provides real insights. The main concerns (collapse analysis, compute comparison) are addressable. I look forward to seeing the authors' response and will update my review accordingly.
 ```
 
 ### Bad Example (What NOT to Do in Open Review)

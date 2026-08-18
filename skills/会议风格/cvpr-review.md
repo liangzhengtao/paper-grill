@@ -24,7 +24,7 @@ Every CVPR review must contain:
 2. **Strengths** (bullet points)
    - Novelty in architecture or method
    - Quality of visual results
-   - Comprehensive ablation studies
+   - Complete ablation studies
    - Benchmark performance
    - Clarity of presentation
 

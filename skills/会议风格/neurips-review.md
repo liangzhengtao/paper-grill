@@ -139,7 +139,7 @@ This paper proposes a novel attention mechanism called "Sparse Dynamic Attention
 
 - **S1:** The proposed gating mechanism for learning sparsity patterns is elegant and well-motivated. The connection to information-theoretic principles provides a solid theoretical foundation.
 - **S2:** The theoretical analysis in Theorem 1 is rigorous and the proof is complete. The complexity bounds are clearly stated and verified empirically.
-- **S3:** Experiments are comprehensive, covering both vision and language domains. The ablation study (Table 3) clearly isolates the contribution of each component.
+- **S3:** Experiments are complete, covering both vision and language domains. The ablation study (Table 3) clearly isolates the contribution of each component.
 - **S4:** The paper is well-written with clear notation. Figures 2 and 3 effectively illustrate the learned sparsity patterns.
 - **S5:** The approach is practical and could have significant impact on deploying transformers in resource-constrained environments.
 
@@ -164,7 +164,7 @@ The paper focuses on efficiency gains but does not discuss the environmental imp
 
 ## Rating: 7
 
-The paper presents a solid contribution with good theoretical grounding and comprehensive experiments. The concerns about missing baselines and overclaimed improvements prevent a higher score, but the core contribution is above the acceptance threshold.
+The paper presents a solid contribution with good theoretical grounding and complete experiments. The concerns about missing baselines and overclaimed improvements prevent a higher score, but the core contribution is above the acceptance threshold.
 
 ## Confidence: 4
 

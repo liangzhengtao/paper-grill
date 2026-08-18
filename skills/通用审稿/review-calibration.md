@@ -6,7 +6,7 @@ Calibrate your review quality to ensure fairness, consistency, and constructiven
 
 - Ensuring your reviews are fair and consistent
 - Calibrating review standards across a research group
-- Training new reviewers on best practices
+- Training new reviewers on proven patterns
 - Detecting and mitigating personal biases
 - Improving the constructiveness of your feedback
 - Preparing for meta-reviewer responsibilities
@@ -255,7 +255,7 @@ Calibrate your review quality to ensure fairness, consistency, and constructiven
 ```markdown
 ## Strengths
 - **S1:** The proposed method (Equation 5) is novel and well-motivated. The connection to information theory (Theorem 1) provides theoretical grounding that is often missing in this area.
-- **S2:** Experiments are comprehensive, including ablation studies (Table 3) that isolate the contribution of each component. The comparison with 5 recent baselines on 3 benchmarks is thorough.
+- **S2:** Experiments are complete, including ablation studies (Table 3) that isolate the contribution of each component. The comparison with 5 recent baselines on 3 benchmarks is thorough.
 - **S3:** The paper is clearly written with consistent notation. Figures 2 and 3 effectively illustrate the method and results.
 
 ## Weaknesses

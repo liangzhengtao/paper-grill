@@ -48,7 +48,7 @@ Every structured review must contain these sections:
    - Are there any logical gaps?
 
 6. **Experimental Evaluation**
-   - Are experiments comprehensive?
+   - Are experiments complete?
    - Are baselines appropriate?
    - Are metrics suitable?
    - Are results statistically significant?
@@ -85,7 +85,7 @@ Every structured review must contain these sections:
 | Significance | Trivial | Limited | Moderate | Important | Transformative |
 | Clarity | Unreadable | Poorly written | Acceptable | Well written | Exceptional |
 | Soundness | Flawed | Questionable | Adequate | Solid | Rigorous |
-| Experiments | Missing | Insufficient | Adequate | Comprehensive | Exhaustive |
+| Experiments | Missing | Insufficient | Adequate | Complete | Exhaustive |
 
 ### Confidence Scale
 
@@ -314,7 +314,7 @@ Every structured review must contain these sections:
 
 "Efficient Graph Neural Networks via Adaptive Sparsification" proposes a method to reduce computational cost of graph neural networks by adaptively sparsifying the adjacency matrix during message passing. The key insight is that not all edges contribute equally to node representations, and the authors learn a sparsification policy using a lightweight gating network. Experiments on ogbn-arxiv, ogbn-products, and Reddit show 2-4x speedup with less than 1% accuracy loss.
 
-**Overall Assessment:** This is a solid practical contribution that addresses an important scalability problem. The method is well-motivated and the experiments are comprehensive, though the theoretical analysis could be stronger.
+**Overall Assessment:** This is a solid practical contribution that addresses an important scalability problem. The method is well-motivated and the experiments are complete, though the theoretical analysis could be stronger.
 
 ---
 
